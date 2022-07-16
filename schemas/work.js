@@ -14,72 +14,79 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      title: 'Release date',
+      name: 'releaseDate',
+      type: 'date'
+    },
+    {
       title: 'Category',
       name: 'category',
       type: 'string',
       initialValue: 'drinks',
       options: {
         list: [
-          { title: 'Drinks', value: 'drinks' },
-          { title: 'Food', value: 'food' },
-          { title: 'Lifestyle', value: 'lifestyle' },
+          { title: 'Project', value: 'project' },
+          { title: 'Story', value: 'story' },
         ],
       },
     },
     {
-      title: 'Type',
-      name: 'type',
-      type: 'string',
-      initialValue: 'still',
-      options: {
-        list: [
-          { title: 'Still', value: 'still' },
-          { title: 'Moving', value: 'moving' }
+      title: 'Tech Stack',
+      name: 'stack',
+      description: 'Technology used for the project',
+      type: 'array', 
+      of: [{
+        title: 'Technology',
+        name: 'tech',
+        type: 'object',
+        icon: FiUser,
+        fields: [
+          {
+            title: 'Title',
+            name: 'title',
+            type: 'string',
+            description: 'eg: "Next"',
+          },
+          {
+            title: 'Type',
+            name: 'type',
+            type: 'string',
+            description: 'eg: "Static Site Generator"',
+          },
         ],
-      },
+        preview: {
+          select: {
+            title: 'title',
+            subtitle: 'type'
+          }
+        }
+      }],
     },
     {
-      title: "Campaign Title",
-      description: "The name of the campaign for this project, eg: 'Ready To Drink Campaign'",
-      name: "campaignTitle",
-      type: "string"
-    },
-    {
-      title: "Location",
-      description: "The location of this project, eg: 'London, UK'",
-      name: "location",
-      type: "string",
-      validation: Rule => Rule.required()
-    },
-    {
-      title: 'Teaser Image',
-      name: 'teaserImage',
+      title: 'Thumbnail',
+      name: 'thumbnail',
       type: 'defaultImage',
-      description: 'The main teaser image used on the work grid (should always be landscape)',
+      description: 'The main image used on the home page',
       validation: Rule => Rule.required()
     },
     {
-      title: 'Teaser Image Thumbnail',
-      name: 'teaserImageThumbnail',
+      title: 'Logo',
+      name: 'logo',
       type: 'defaultImage',
-      description: 'The thumbnail of the teaser image used on the work grid (can be landscape or portrait)',
+      description: 'The main image used on the home page',
       validation: Rule => Rule.required()
     },
     {
-      name: 'heroCarouselImages',
-      type: 'array',
-      title: 'Hero Carousel Images',
-      of: [
-        {
-          name: 'image',
-          type: 'defaultImage',
-          title: 'Image',
-        },
-      ],
-      options: {
-        layout: 'grid',
-      },
+      title: 'Main Image',
+      name: 'image',
+      type: 'defaultImage',
+      description: 'The main image used in the project',
       validation: Rule => Rule.required()
+    },
+    {
+      title: 'Background color',
+      name: 'bgColor',
+      type: 'color'
     },
     {
       title: 'Content Blocks',
@@ -171,11 +178,18 @@ export default {
       type: 'seo'
     }
   ],
+  orderings: [
+    {
+      title: "Title",
+      name: "title",
+      by: [{ field: "releaseDate", direction: "asc" }],
+    },
+  ],
   preview: {
     select: {
       title: 'title',
       subtitle: 'campaignTitle',
-      media: 'teaserImage'
+      media: 'thumbnail'
     }
   }
 }

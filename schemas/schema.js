@@ -3,9 +3,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Singletons
 import singletonHome from './singletonHome'
-import singletonStudio from './singletonStudio'
+import singletonAbout from './singletonAbout'
 import singletonContact from './singletonContact'
-import singletonReel from './singletonReel'
 import singletonMenu from './singletonMenu'
 
 // Documents
@@ -13,7 +12,6 @@ import work from './work'
 
 // Common
 import seo from './common/seo'
-import teamMember from './common/teamMember'
 import defaultImage from './common/defaultImage'
 import modularImageBlock from './common/modularImageBlock'
 import textBlock from './common/textBlock'
@@ -28,12 +26,10 @@ export default createSchema({
   
   types: schemaTypes.concat([
     singletonHome,
-    singletonStudio,
+    singletonAbout,
     singletonContact,
-    singletonReel,
     singletonMenu,
     work,
-    teamMember,
     defaultImage,
     modularImageBlock,
     modularImageTextBlock,

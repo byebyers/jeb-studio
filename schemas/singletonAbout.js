@@ -1,6 +1,6 @@
 export default {
-  title: 'Studio',
-  name: 'studio',
+  title: 'About',
+  name: 'about',
   type: 'document',
   __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   fields: [
@@ -31,12 +31,6 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Content Supporting Image',
-      name: 'contentSupportingImage',
-      type: 'defaultImage',
-      validation: Rule => Rule.required()
-    },
-    {
       title: 'Client List',
       name: 'clientList',
       type: 'array', 
@@ -51,10 +45,11 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Team Members',
-      name: 'teamMembers',
+      title: 'Technologies',
+      name: 'tech',
       type: 'array', 
-      of: [{ type: 'teamMember' }]
+      of: [{type: 'string'}],
+      validation: Rule => Rule.required()
     },
     {
       title: 'SEO / Share Settings',

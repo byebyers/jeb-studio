@@ -4,7 +4,7 @@ import IframePreview from './preview/IFramePreview'
 import {
   FiHome,
   FiMail,
-  FiCamera,
+  FiFile,
   FiUser,
   FiMenu
 } from 'react-icons/fi'
@@ -37,11 +37,9 @@ export default () =>
     .items([
       S.listItem().title('Home').child(S.editor().id('home').schemaType('home').documentId('singleton-home').views(getPreview('home'))).icon(FiHome),
       S.divider(),
-      S.listItem().title('Studio').child(S.editor().id('studio').schemaType('studio').documentId('singleton-studio').views(getPreview('studio'))).icon(FiUser),
+      S.listItem().title('About').child(S.editor().id('about').schemaType('about').documentId('singleton-about').views(getPreview('about'))).icon(FiUser),
       S.divider(),
-      S.listItem().title('Work').child(S.documentTypeList('work').title('Work')).icon(FiCamera),
-      S.divider(),
-      S.listItem().title('Reel').child(S.editor().id('reel').schemaType('reel').documentId('singleton-reel').views(getPreview('reel'))).icon(FiCamera),
+      S.listItem().title('Work').child(S.documentTypeList('work').title('Work')).icon(FiFile),
       S.divider(),
       S.listItem().title('Contact').child(S.editor().id('contact').schemaType('contact').documentId('singleton-contact')).icon(FiMail),
       S.divider(),
