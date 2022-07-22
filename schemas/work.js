@@ -22,11 +22,11 @@ export default {
       title: 'Category',
       name: 'category',
       type: 'string',
-      initialValue: 'drinks',
+      initialValue: 'project',
       options: {
         list: [
           { title: 'Project', value: 'project' },
-          { title: 'Story', value: 'story' },
+          { title: 'Case Study', value: 'story' },
         ],
       },
     },

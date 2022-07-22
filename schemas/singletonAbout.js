@@ -45,13 +45,6 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Technologies',
-      name: 'tech',
-      type: 'array', 
-      of: [{type: 'string'}],
-      validation: Rule => Rule.required()
-    },
-    {
       title: 'SEO / Share Settings',
       name: 'seo',
       type: 'seo'
