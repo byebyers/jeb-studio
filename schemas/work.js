@@ -104,13 +104,6 @@ export default {
       ],
     },
     {
-      title: 'Tags',
-      name: 'tags',
-      description: 'Tags for this project, eg: "Set Design", "Motion", "Social" etc',
-      type: 'array', 
-      of: [{type: 'string'}],
-    },
-    {
       title: 'Credits',
       name: 'credits',
       description: 'Credits for this project',
@@ -143,6 +136,13 @@ export default {
           }
         }
       }],
+    },
+    {
+      title: 'Tags',
+      name: 'tags',
+      description: 'Tags for this project, eg: "Set Design", "Motion", "Social" etc',
+      type: 'array', 
+      of: [{type: 'string'}],
     },
     {
       name: 'slug',
