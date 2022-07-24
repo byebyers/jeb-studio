@@ -51,13 +51,13 @@ export default {
   ],
   preview: {
     select: {
-      layout: 'layout'
+      layout: 'reverseOrder'
     },
     prepare(selection) {
       const {layout} = selection
       return {
         title: 'Double Image Block',
-        subtitle: `${layout}`
+        subtitle: `${layout === true ? 'Normal' : 'Reversed'}`
       }
     }
   }
