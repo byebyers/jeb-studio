@@ -138,13 +138,6 @@ export default {
       }],
     },
     {
-      title: 'Tags',
-      name: 'tags',
-      description: 'Tags for this project, eg: "Set Design", "Motion", "Social" etc',
-      type: 'array', 
-      of: [{type: 'string'}],
-    },
-    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
@@ -152,20 +145,13 @@ export default {
       options: {
         source: (doc) => {
           let titleSlug = ''
-          let campaignSlug = ''
           if (doc.title) {
             titleSlug = `${doc.title}`
           } else {
             titleSlug = ''
           }
 
-          if (doc.campaignTitle) {
-            campaignSlug = `-${doc.campaignTitle}`
-          } else {
-            campaignSlug = ''
-          }
-
-          return `${titleSlug}${campaignSlug}`;
+          return `${titleSlug}`;
         },
         maxLength: 96,
         slugify: (input) => slugify(`${input}`)
