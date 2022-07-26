@@ -63,6 +63,12 @@ export default {
       }],
     },
     {
+      title: 'Site URL',
+      name: 'url',
+      type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
       title: 'Thumbnail',
       name: 'thumbnail',
       type: 'defaultImage',
