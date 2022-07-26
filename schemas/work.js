@@ -77,16 +77,24 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      title: 'Logo Type',
+      name: 'orientation',
+      type: 'string',
+      initialValue: 'badge',
+      options: {
+        list: [
+          { title: 'Badge', value: 'badge' },
+          { title: 'Button', value: 'button' },
+          { title: 'Banner', value: 'banner' }
+        ],
+      },
+    },
+    {
       title: 'Main Image',
       name: 'image',
       type: 'defaultImage',
       description: 'The main image used in the project',
       validation: Rule => Rule.required()
-    },
-    {
-      title: 'Background color',
-      name: 'bgColor',
-      type: 'color'
     },
     {
       title: 'Content Blocks',
