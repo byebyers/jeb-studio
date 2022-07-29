@@ -7,7 +7,7 @@ const secret = process.env.SANITY_STUDIO_SANITY_PREVIEW_SECRET  //dont forget Sa
 export const getGlobalSlug = (slug) => globalSlugs[slug]
 
 // TODO: Change remote url
-const remoteURL = 'https://jeb.vercel.app/'
+const remoteURL = 'https://jeb-sigma.vercel.app/'
 const localURL = 'http://localhost:3000/'
 export const previewURL = window.location.hostname === 'localhost' ? localURL : remoteURL
 
