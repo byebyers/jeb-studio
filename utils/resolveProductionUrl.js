@@ -3,7 +3,7 @@ const globalSlugs = {
   about: '/about',
 }
 
-const secret = process.env.SANITY_STUDIO_SANITY_PREVIEW_SECRET
+const secret = process.env.SANITY_STUDIO_SANITY_PREVIEW_SECRET  //dont forget Sanity build to include env variables.
 export const getGlobalSlug = (slug) => globalSlugs[slug]
 
 // TODO: Change remote url
