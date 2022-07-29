@@ -3,7 +3,7 @@ const globalSlugs = {
   about: '/about',
 }
 
-const secret = 'asf67asdf768a'  //process.env.SANITY_STUDIO_SANITY_PREVIEW_SECRET
+const secret = process.env.SANITY_STUDIO_SANITY_PREVIEW_SECRET
 export const getGlobalSlug = (slug) => globalSlugs[slug]
 
 // TODO: Change remote url
